@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/* fonts */
+
+/* Register your custom font family and tell the browser where to find it. */
+@font-face {
+    font-family: "Droid Serif";
+    src: url("/fonts/DroidSerif-Regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Droid Serif";
+    src: url("/fonts/DroidSerif-Bold-webfont.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Grand Hotel";
+    src: url("/fonts/GrandHotel-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* THEME */
+
+@theme {
+    --font-droid-serif: "Droid Serif", serif;
+    --color-primary: #211e1f;
+    --font-grand-hotel: "Grand Hotel", cursive;
+}
+
+/* CUSTOM STYLES */
+body {
+    font-family: var(--font-droid-serif);
+}
