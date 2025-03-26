@@ -1,9 +1,9 @@
 ---
-const {text,className,type} = Astro.props
+const {text,className,type,path="#"} = Astro.props
 ---
 
 
-<a href="#_" class="relative inline-block px-14 py-4 font-medium group">
+<a href={path} class="relative inline-block px-14 py-4 font-medium group">
     <span class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-green-700  group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
     <span class="absolute inset-0 w-full h-full bg-white border-2 border-green-700    group-hover:bg-green-700  "></span>
     <span class="relative text-green-700 font-black  group-hover:text-white">{text}</span>

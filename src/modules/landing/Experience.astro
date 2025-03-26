@@ -2,23 +2,25 @@
 import Image from 'astro/components/Image.astro';
 import WafflesImage from './../../assets/waffles.png';
 ---
-<section class="experience-section relative">
-    <Image
-        src={WafflesImage}
-        alt="Waffles Image"
-        class="size-16 md:size-[200px] 2xl:size-[600px] object-contain absolute z-20 left-24 top-[35%] transform -translate-y-1/2"
-        width="960"
-        height="825"
-    />
-    <div class="inset-0  z-20">
-        <h2 class="flex flex-col pl-[51%] pt-[7%] font-bold text-[2rem] xl:text-[4rem] 2xl:text-[4rem] font-droid-serif">
-            <span>Pequeños</span>
-            <span>Placeres</span>
-            <span>Grandes momentos</span>
-            <p class="text-xl font-sans mt-4 max-w-[500px] opacity-60">
-                El café es más que una bebida, es un arte. Desde la molienda hasta la taza, cada detalle cuenta en esta experiencia única.
-            </p>
-        </h2>
+<section class="experience-section relative h-[85vh] xl:h-[92vh]">
+    <div class="px-6 2xl:max-w-5xl mx-auto flex  items-center justify-center gap-x-12 h-full relative">
+        <Image
+            src={WafflesImage}
+            alt="Waffles Image"
+            class="size-[30%] md:size-[45%] xl:size-[60%] object-contain flex-1 md:mb-[10%] hidden md:block"
+            width="960"
+            height="825"
+        />
+        <div class="flex-1 mb-28 max-w-[80%] md:max-w-[60%] relative max-md:-top-10">
+            <h2 class="flex flex-col font-bold text-[2.5rem] md:text-[3rem] xl:text-[3.5rem] 2xl:text-[4.5rem] font-droid-serif text-[#443e3d]">
+                <span>Un</span>
+                <span>regalo</span>
+                <span class="font-grand-hotel">para el paladar</span>
+                <p class="mt-6 text-xl font-sans max-w-[90%] opacity-60">
+                    El café es más que una bebida, es un arte. Desde la molienda hasta la taza, cada detalle cuenta en esta experiencia única.
+                </p>
+            </h2>
+        </div>
     </div>
 
 </section>
@@ -27,6 +29,6 @@ import WafflesImage from './../../assets/waffles.png';
     .experience-section {
         background: url('/src/assets/bg-experience.jpg') no-repeat center center ;
         background-size: cover;
-        height: 85vh;
+        
     }
 </style>

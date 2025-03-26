@@ -14,7 +14,7 @@ import { navOptions } from '../constants';
         <nav class="hidden md:flex justify-between items-center gap-x-8">
             {
                 navOptions.map((option) => (
-                    <a href={option.path} class="border-b-2 border-primary font-bold hover:text-primary/60" key={option.title}>
+                    <a href={option.path} class="border-b-2 border-primary font-bold hover:text-primary/60" data-key={option.title}>
                         {option.title}
                     </a>
                 ))

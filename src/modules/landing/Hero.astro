@@ -30,7 +30,7 @@ import CurveArrowImage from "./../../assets/curve-arrow-right.png"
     <Image    
         src={CurveArrowImage}
         alt="Curve Arrow Image"
-        class="size-16 md:size-[100px] 2xl:size-[150px] object-contain absolute left-[45%] transform -translate-x-1/2  z-20 rotate-[110deg] top-[55%]"
+        class="parallax-item size-16 md:size-[100px] 2xl:size-[150px] object-contain absolute left-[45%] transform -translate-x-1/2  z-20 rotate-[110deg] top-[55%]"
         width="960"
         height="825"
     />
@@ -39,11 +39,11 @@ import CurveArrowImage from "./../../assets/curve-arrow-right.png"
         <Image 
             src={CafeImage}
             alt="Cafe Image"
-            class="size-[150px] sm:size-[200px] md:size-[250px] lg:size-[300px] xl:size-[370px] 2xl:size-[420px] object-contain absolute bottom-0 right-10 md:right-0 z-20"
+            class="parallax-item size-[150px] sm:size-[200px] md:size-[250px] lg:size-[300px] xl:size-[370px] 2xl:size-[420px] object-contain absolute bottom-0 right-10 md:right-0 z-20"
             width="960"
             height="825"
         />
-        <div class="mt-[10%] xl:mt-10">
+        <div class="mt-[10%] xl:mt-10 parallax-item ">
             <h2 class="text-3xl sm:text-[2.5rem] md:text-[3rem] lg:text-[4rem] xl:text-[4.5rem] 2xl:text-[5rem] flex-col hidden md:flex">
                 <span class="font-grand-hotel text">Cada taza</span>
                 <span class="font-bold">Una historia que contar</span>
@@ -58,3 +58,17 @@ import CurveArrowImage from "./../../assets/curve-arrow-right.png"
     </div>
 </section>
 <!-- text-3xl md:text-[3rem] xl:text-[4rem] 2xl:text-[5rem] -->
+
+<script>
+    document.addEventListener('mousemove',parallax);
+    function parallax(){
+        const $itemsParallax = document.querySelectorAll('.parallax-item');
+        $itemsParallax.forEach(item => {
+            const speed = 2.5;
+            const x = (window.innerWidth - event.pageX * speed) / 100;
+            const y = (window.innerHeight - event.pageY * speed) / 100;
+            item.style.transform = `translateX(${x}px) translateY(${y}px)`;
+        });
+    }
+
+</script>
