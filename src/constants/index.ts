@@ -17,6 +17,6 @@ export const navOptions = [
     {
         id: 4,
         title: "Galería",
-        path: "/gallery",
+        path: "/galeria",
     },
 ];

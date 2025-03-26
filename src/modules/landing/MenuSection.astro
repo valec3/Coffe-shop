@@ -1,0 +1,39 @@
+---
+import Button from "@/components/Button.astro";
+import CappucinoIcedImage from "./../../assets/categorias/cappucino-iced.png";
+import JugosImage from "./../../assets/categorias/jugos.png";
+import MojitoImage from "./../../assets/categorias/mojito.png";
+import ChocolateImage from "./../../assets/categorias/chocolate.webp";
+import Image from "astro/components/Image.astro";
+---
+
+<section class="bg-white py-20 md:py-36">
+    <div class="max-w-5xl mx-auto flex flex-col items-center">
+        <h2 class="font-droid-serif text-xl xl:text-3xl 2xl:text-4xl font-bold text-primary text-center tracking-[0.5rem] uppercase">
+            Menu de la casa
+        </h2>
+        <p class="text-center mt-8 font-bold text-primary/50">El café es un arte, una pausa en el tiempo, un placer que despierta los sentidos. Cada grano cuenta una historia, cada taza es una experiencia.</p>
+        <div class="my-4"></div>
+        <Button text="VER MENU COMPLETO" />
+    </div>
+</section>
+<section class="menu-section py-20">
+    <div class="h-full max-w-5xl mx-auto flex flex-col items-center justify-center gap-y-10">
+        <h2 class="font-droid-serif text-xl xl:text-3xl 2xl:text-4xl font-bold text-primary text-center tracking-[0.5rem] uppercase my-3">
+            Nuestras categorías
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8 px-4">
+            <Image src={CappucinoIcedImage} alt="Cappucino Iced" class="p-2 object-contain size-40 rounded-full bg-black hover:bg-slate-700 cursor-pointer" />
+            <Image src={JugosImage} alt="Jugos" class="p-2 object-contain size-40 rounded-full bg-black hover:bg-slate-700 cursor-pointer" />
+            <Image src={MojitoImage} alt="Mojito" class="p-3 object-contain size-40 rounded-full bg-black hover:bg-slate-700 cursor-pointer" />
+            <Image src={ChocolateImage} alt="Chocolate" class="p-1 object-contain size-40 rounded-full bg-black hover:bg-slate-700 cursor-pointer" />
+        </div>
+    </div>
+</section>
+
+<style>
+    .menu-section {
+        background: url('/src/assets/bg-menu.jpg') no-repeat center center ;
+        background-size: cover;
+    }
+</style>

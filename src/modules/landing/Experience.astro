@@ -1,3 +1,32 @@
-<section>
-    
+---
+import Image from 'astro/components/Image.astro';
+import WafflesImage from './../../assets/waffles.png';
+---
+<section class="experience-section relative">
+    <Image
+        src={WafflesImage}
+        alt="Waffles Image"
+        class="size-16 md:size-[200px] 2xl:size-[600px] object-contain absolute z-20 left-24 top-[35%] transform -translate-y-1/2"
+        width="960"
+        height="825"
+    />
+    <div class="inset-0  z-20">
+        <h2 class="flex flex-col pl-[51%] pt-[7%] font-bold text-[2rem] xl:text-[4rem] 2xl:text-[4rem] font-droid-serif">
+            <span>Pequeños</span>
+            <span>Placeres</span>
+            <span>Grandes momentos</span>
+            <p class="text-xl font-sans mt-4 max-w-[500px] opacity-60">
+                El café es más que una bebida, es un arte. Desde la molienda hasta la taza, cada detalle cuenta en esta experiencia única.
+            </p>
+        </h2>
+    </div>
+
 </section>
+
+<style>
+    .experience-section {
+        background: url('/src/assets/bg-experience.jpg') no-repeat center center ;
+        background-size: cover;
+        height: 85vh;
+    }
+</style>
