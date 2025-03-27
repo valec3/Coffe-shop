@@ -12,7 +12,7 @@ export const navOptions = [
     {
         id: 3,
         title: "Nosotros",
-        path: "#about",
+        path: "/#about",
     },
     {
         id: 4,

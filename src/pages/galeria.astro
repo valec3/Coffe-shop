@@ -1,12 +1,41 @@
 ---
+
 import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout>
-    <section class=" w-full h-[70vh] flex justify-center items-center md:max-w-3xl lg:max-w-5xl mx-auto py-10 px-6 ">
-        <h3 class="font-bold text-[4rem]">
-            En construcción
+    <section class=" w-full flex flex-col gap-4 md:max-w-3xl lg:max-w-5xl mx-auto py-10 px-6 ">
+        <h3 class="font-bold text-[2rem] text-center mb-10">
+            Sonrisas y buenos momentos
         </h3>
-    
+        <div id="nanogallery2"
+            data-nanogallery2 = '{
+                "thumbnailWidth":   "auto XS250 SMauto",
+                "thumbnailHeight":  "450 XSauto SM350",
+                "itemsBaseURL":"./gallery/"
+                }' >
+            <a href = "01.jpg" data-ngThumb = "01.jpg" class="img-gallery" ></a>
+            <a href = "02.jpg" data-ngThumb = "02.jpg" class="img-gallery" ></a>
+            <a href = "03.jpg" data-ngThumb = "03.jpg" class="img-gallery" ></a>
+            <a href = "04.jpg" data-ngThumb = "04.jpg" class="img-gallery" ></a>
+            <a href = "05.jpg" data-ngThumb = "05.jpg" class="img-gallery" ></a>
+            <a href = "06.jpg" data-ngThumb = "06.jpg" class="img-gallery" ></a>
+            <a href = "07.jpg" data-ngThumb = "07.jpg" class="img-gallery" ></a>
+            <a href = "08.jpg" data-ngThumb = "08.jpg" class="img-gallery" ></a>
+            <a href = "09.jpg" data-ngThumb = "09.jpg" class="img-gallery" ></a>
+            <a href = "10.jpg" data-ngThumb = "10.jpg" class="img-gallery" ></a>
+            <a href = "11.jpg" data-ngThumb = "11.jpg" class="img-gallery" ></a>
+            <a href = "12.jpg" data-ngThumb = "12.jpg" class="img-gallery" ></a>
+            <a href = "13.jpg" data-ngThumb = "13.jpg" class="img-gallery" ></a>
+        </div>
     </section>
 </Layout>
+
+<style>
+    .img-gallery {
+        width: 100%;
+        min-height: 150px;
+        display: block;
+        background-color: #000;
+    }
+</style>

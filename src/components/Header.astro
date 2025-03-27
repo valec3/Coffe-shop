@@ -3,7 +3,7 @@ import Image from 'astro/components/Image.astro';
 import logoImg from '../assets/logo-v1.png';
 import { navOptions } from '../constants';
 ---
-<header class="p-4 bg-white text-primary relative">
+<header class="p-4 bg-white text-primary fixed h-[88px] top-0 left-0 w-full shadow-sm z-50">
     <div class="max-w-5xl mx-auto flex justify-between items-center">
         <button id="mobile-menu-toggle" class="cursor-pointer block md:hidden z-50">
             <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -81,14 +81,14 @@ import { navOptions } from '../constants';
         menuIcon.classList.toggle('hidden');
         closeIcon.classList.toggle('hidden');
 
-        // check if the menu is open or closed
-        if (mobileMenu.classList.contains('translate-x-full')){
-            // unable scroll when menu is closed
-            document.body.style.overflow = 'hidden';
-        } else {
-            // enable scroll when menu is open
+        if (mobileMenu.classList.contains('translate-x-full')) {
+    // Habilita el scroll cuando el menú se cierra
             document.body.style.overflow = 'auto';
+        } else {
+            // Bloquea el scroll cuando el menú está abierto
+            document.body.style.overflow = 'hidden';
         }
+
 
     });
 
@@ -101,4 +101,6 @@ import { navOptions } from '../constants';
             e.target.classList.add('border-b-2', 'border-primary');
         }
     });
+
+
 </script>
