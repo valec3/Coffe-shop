@@ -80,6 +80,16 @@ import { navOptions } from '../constants';
         mobileMenu.classList.toggle('translate-x-full');
         menuIcon.classList.toggle('hidden');
         closeIcon.classList.toggle('hidden');
+
+        // check if the menu is open or closed
+        if (mobileMenu.classList.contains('translate-x-full')){
+            // unable scroll when menu is closed
+            document.body.style.overflow = 'hidden';
+        } else {
+            // enable scroll when menu is open
+            document.body.style.overflow = 'auto';
+        }
+
     });
 
     // Header link active state management
