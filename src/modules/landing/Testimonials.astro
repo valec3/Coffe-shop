@@ -1,0 +1,91 @@
+---
+import { Image } from 'astro:assets';
+import user1 from '@/assets/testimonials/user1.png';
+import user2 from '@/assets/testimonials/user2.png';
+import user3 from '@/assets/testimonials/user3.png';
+import user4 from '@/assets/testimonials/user4.png';
+---
+
+<section class="bg-white py-10 md:py-24">
+    <div class="max-w-5xl mx-auto px-4">
+        <h2 class="font-droid-serif text-xl xl:text-3xl 2xl:text-4xl font-bold text-primary text-center tracking-[0.5rem] uppercase mb-16">
+            Testimonios
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            {/* Testimonial 1 */}
+            <div class=" rounded-lg p-6 border border-primary/10 hover:shadow-xl transition-shadow duration-300">
+                <div class="flex items-center mb-4">
+                    <Image 
+                        src={user1} 
+                        alt="María Fernández" 
+                        class="w-16 h-16 rounded-full object-cover mr-4 border-2 border-primary/30"
+                    />
+                    <div>
+                        <h3 class="font-bold text-primary">Priscila Zea Parra</h3>
+                    </div>
+                </div>
+                <p class="text-primary/80 italic">
+                    "Ambiente, café y atención 10 de 10 ⭐"
+                </p>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div class=" rounded-lg p-6 border border-primary/10 hover:shadow-xl transition-shadow duration-300">
+                <div class="flex items-center mb-4">
+                    <Image 
+                        src={user2} 
+                        alt="Carlos Mendoza" 
+                        class="w-16 h-16 rounded-full object-cover mr-4 border-2 border-primary/30"
+                    />
+                    <div>
+                        <h3 class="font-bold text-primary">Diego Ocola</h3>
+                    </div>
+                </div>
+                <p class="text-primary/80 italic">
+                    "El ambiente es cálido, la atención es buena, me gustó mucho su café. Su waffles también son ricos y no tan pesados como otros que he probado. Fuimos por la noche y el tiempo de atención fue normal."
+                </p>
+            </div>
+
+            {/* Testimonial 3 */}
+            <div class=" rounded-lg p-6 border border-primary/10 hover:shadow-xl transition-shadow duration-300">
+                <div class="flex items-center mb-4">
+                    <Image 
+                        src={user3} 
+                        alt="Laura Sánchez" 
+                        class="w-16 h-16 rounded-full object-cover mr-4 border-2 border-primary/30"
+                    />
+                    <div>
+                        <h3 class="font-bold text-primary">Ale Navarro</h3>
+                    </div>
+                </div>
+                <p class="text-primary/80 italic">
+                    "Excelente cafeteria de especialidad, buena atención y amabilidad. El lugar es acogedor."
+                </p>
+            </div>
+
+            {/* Testimonial 4 */}
+            <div class=" rounded-lg p-6 border border-primary/10 hover:shadow-xl transition-shadow duration-300">
+                <div class="flex items-center mb-4">
+                    <Image 
+                        src={user4} 
+                        alt="Roberto Gutiérrez" 
+                        class="w-16 h-16 rounded-full object-cover mr-4 border-2 border-primary/30"
+                    />
+                    <div>
+                        <h3 class="font-bold text-primary">Paula Swinnen</h3>
+                    </div>
+                </div>
+                <p class="text-primary/80 italic">
+                    "Hermoso lugar ! El café y el servicio excelentes, una joya escondida en la ciudad de Puno. Gracias !"
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        background-color: #f4f4f4;
+    }
+</style>

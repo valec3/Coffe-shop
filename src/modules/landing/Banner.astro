@@ -1,0 +1,18 @@
+---
+import Image from "astro/components/Image.astro";
+import BannerImage from "@/assets/bg-home.jpg";
+import CoffePot from "@/assets/coffee-pot.png";
+---
+
+<section class="h-[80vh] relative flex justify-center items-center" id="bg-banner">
+    <Image
+        src={BannerImage}
+        alt="Banner"
+        class="object-cover w-full h-full absolute inset-0 size-full"
+    />
+    <Image
+        src={CoffePot}
+        alt="Coffe Pot"
+        class="object-contain size-54 md:size-60 lg:size-80 xl:size-100 z-20"
+    />
+</section>

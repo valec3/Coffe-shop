@@ -1,32 +1,38 @@
-<footer>
-    <div class="footer-content">
-        <p>&copy; 2025 Your Company Name. All rights reserved.</p>
-        <nav>
-        <ul>
-            <li><a href="/privacy">Privacy Policy</a></li>
-            <li><a href="/terms">Terms of Service</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-        </ul>
-        </nav>
+---
+import LogoImage from '@/assets/logo-v2.png';
+import Image from 'astro/components/Image.astro';
+---
+<footer class="bg-[#1a1a1a] text-white py-10 text-center">
+    <div class="container mx-auto flex flex-col items-center space-y-4">
+      <Image src={LogoImage} alt="Hot Coffee Logo" class="w-24 h-auto" />
+        <p class="max-w-lg text-gray-400 text-sm">
+            
+      </p>
+  
+      <!-- Dirección y contacto -->
+      <div class="flex flex-wrap justify-center gap-6 text-sm my-6">
+        <div>
+          <p>Puno, Peru</p>
+          <p>Jirón Ilo H 2 20001</p>
+        </div>
+        <div>
+          <p>Phone: <a href="tel:8884567890" class="text-gray-300 hover:text-white">957012853 </a></p>
+        </div>
+      </div>
+  
+      <!-- Iconos sociales -->
+      <div class="flex space-x-4 text-gray-500 mt-8 mb-30">
+        <a href="#" class="hover:text-white"><i class="fab fa-twitter text-2xl"></i></a>
+        <a href="#" class="hover:text-white"><i class="fab fa-facebook-f text-2xl"></i></a>
+        <a href="#" class="hover:text-white"><i class="fab fa-google-plus-g text-2xl"></i></a>
+        <a href="#" class="hover:text-white"><i class="fab fa-linkedin-in text-2xl"></i></a>
+        <a href="#" class="hover:text-white"><i class="fab fa-skype text-2xl"></i></a>
+      </div>
+      
+      <!-- Derechos y enlaces -->
+      <p class="text-sm text-gray-500">
+        Desarrollado por <a href="https://www.linkedin.com/in/eduardo-vega-ramirez-7b0b3b1b4/" class="text-red-400 font-black">KleinCode</a> &copy; 2025
+      </p>
     </div>
-    <style>
-        .footer-content {
-        background-color: #333;
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-        }
-        .footer-content nav ul {
-        list-style-type: none;
-        padding: 0;
-        }
-        .footer-content nav ul li {
-        display: inline;
-        margin: 0 10px;
-        }
-        .footer-content nav ul li a {
-        color: #fff;
-        text-decoration: none;
-        }
-    </style>
-</footer>
+  </footer>
+  

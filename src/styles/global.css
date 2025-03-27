@@ -32,10 +32,21 @@
 @theme {
     --font-droid-serif: "Droid Serif", serif;
     --color-primary: #211e1f;
+    --color-secondary: #443e3d;
+    --color-tertiary: #201f1f;
     --font-grand-hotel: "Grand Hotel", cursive;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 /* CUSTOM STYLES */
 body {
     font-family: var(--font-droid-serif);
+}
+
+.menu-category {
+    @apply p-2 object-contain size-40 rounded-full bg-secondary hover:opacity-75 cursor-pointer;
+}
+.testimonial-text {
+    @apply text-primary/80 italic text-lg relative;
 }

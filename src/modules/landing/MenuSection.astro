@@ -1,10 +1,7 @@
 ---
 import Button from "@/components/Button.astro";
-import CappucinoIcedImage from "./../../assets/categorias/cappucino-iced.png";
-import JugosImage from "./../../assets/categorias/jugos.png";
-import MojitoImage from "./../../assets/categorias/mojito.png";
-import ChocolateImage from "./../../assets/categorias/chocolate.webp";
 import Image from "astro/components/Image.astro";
+import AboutImage from "@/assets/about.png";
 ---
 
 <section class="bg-white py-20 md:py-36">
@@ -17,23 +14,50 @@ import Image from "astro/components/Image.astro";
         <Button text="VER MENU COMPLETO" path="/menu" />
     </div>
 </section>
-<section class="menu-section py-20">
-    <div class="h-full max-w-5xl mx-auto flex flex-col items-center justify-center gap-y-10">
+<section class="menu-section py-10 lg:py-20" id="about">
+    <div class="h-full max-w-5xl mx-auto flex px-6 :px-10 flex-col items-center justify-center gap-y-10">
         <h2 class="font-droid-serif text-xl xl:text-3xl 2xl:text-4xl font-bold text-primary text-center tracking-[0.5rem] uppercase my-3">
-            Nuestras categorías
+            Nosotros
         </h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8 px-4">
-            <Image src={CappucinoIcedImage} alt="Cappucino Iced" class="p-2 object-contain size-40 rounded-full bg-black hover:bg-slate-700 cursor-pointer" />
-            <Image src={JugosImage} alt="Jugos" class="p-2 object-contain size-40 rounded-full bg-black hover:bg-slate-700 cursor-pointer" />
-            <Image src={MojitoImage} alt="Mojito" class="p-3 object-contain size-40 rounded-full bg-black hover:bg-slate-700 cursor-pointer" />
-            <Image src={ChocolateImage} alt="Chocolate" class="p-1 object-contain size-40 rounded-full bg-black hover:bg-slate-700 cursor-pointer" />
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 px-4 gap-x-16 items-center content-center">
+            <div class="relative about-img-container mx-auto max-md:w-[320px]">
+                <Image 
+                    src={AboutImage} 
+                    alt="Cappucino Iced" 
+                    class="relative  p-2 object-contain hover:opacity-85 cursor-pointer hover:scale-[101%] rotate-[5deg] about-img z-10"
+                />
+            </div>
+            <div class="flex flex-col justify-center items-center">
+                <h2 class="font-bold text-4xl font-grand-hotel mb-6 text-center  md:text-left">El sabor que enamora</h2>
+                <p class="text-2xl">En Ukumari Coffee Puno, creemos que cada momento merece un buen sabor. No solo preparamos café, sino una variedad de delicias que transforman cada visita en una experiencia única, siempre con ingredientes de calidad y el toque especial que nos caracteriza.</p>
+                <a href="https://www.facebook.com/profile.php?id=100093504375639" target="_blank" class="w-fit mt-6 text-primary py-2 md:py-4 px-6 md:px-10 uppercase font-bold font-sans border border-primtext-primary hover:bg-primary hover:text-white transition duration-300 ease-in-out">
+                    Conoce más
+                </a>
+            </div>
         </div>
     </div>
 </section>
 
 <style>
     .menu-section {
-        background: url('/src/assets/bg-menu.jpg') no-repeat center center ;
+        background: url('/src/assets/bg-menu.jpg') no-repeat center center;
         background-size: cover;
+    }
+    .about-img-container {
+        position: relative;
+    }
+    .about-img-container::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        border: 1px solid #4b4948;
+        z-index: 1;
+    }
+    .about-img {
+        position: relative;
+        z-index: 10;
     }
 </style>
