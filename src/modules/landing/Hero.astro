@@ -5,22 +5,18 @@ import CafeImage from "./../../assets/coffe-cup.png"
 import BeansCoffeeImage from "./../../assets/beans-coffee.webp"
 import CurveArrowImage from "./../../assets/curve-arrow-right.png"
 ---
-<section class="relative w-full h-[35%] sm:h-[50%] md:h-[60%] lg:h-[80%] xl:h-[750px] overflow-hidden flex justify-center items-center ">
+<section class="relative w-full h-[35%] sm:h-[50%] md:h-[60%] lg:h-[80%] xl:h-[85%] 2xl:h-[90%] overflow-hidden flex justify-center items-center ">
     <Image
         src={HeroImage}
         alt="Hero Image"
         class="w-full h-full object-cover absolute inset-0 z-10 "
-        width="1000"
-        height="500"
         loading="eager"
-
+        priority={true}
     />
     <Image 
         src={BeansCoffeeImage}
         alt="Beans Coffee Image"
         class="size-16 md:size-[200px] 2xl:size-[400px] object-contain absolute right-10 top-0 z-20 rotate-180"
-        width="960"
-        height="825"
         loading="eager"
 
     />
@@ -28,8 +24,6 @@ import CurveArrowImage from "./../../assets/curve-arrow-right.png"
         src={BeansCoffeeImage}
         alt="Beans Coffee Image"
         class="size-16 md:size-[200px] 2xl:size-[400px] object-contain absolute bottom-0 left-10 z-20"
-        width="960"
-        height="825"
         loading="eager"
 
     />
@@ -37,8 +31,6 @@ import CurveArrowImage from "./../../assets/curve-arrow-right.png"
         src={CurveArrowImage}
         alt="Curve Arrow Image"
         class="parallax-item size-16 md:size-[100px] 2xl:size-[150px] object-contain absolute left-[45%] transform -translate-x-1/2  z-20 rotate-[110deg] top-[55%]"
-        width="960"
-        height="825"
         loading="eager"
     />
 
@@ -47,8 +39,6 @@ import CurveArrowImage from "./../../assets/curve-arrow-right.png"
             src={CafeImage}
             alt="Cafe Image"
             class="parallax-item size-[150px] sm:size-[200px] md:size-[250px] lg:size-[300px] xl:size-[370px] 2xl:size-[420px] object-contain absolute bottom-0 right-10 md:right-0 z-20"
-            width="960"
-            height="825"
             loading="eager"
         />
         <div class="mt-[10%] xl:mt-10 parallax-item ">
